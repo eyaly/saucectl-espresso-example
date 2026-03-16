@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 env:
   SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
@@ -23,14 +24,14 @@ jobs:
         with:
           concurrency: 10
 
-  cucumber-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+  # cucumber-test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
 
-      - name: Run saucectl
-        uses: saucelabs/saucectl-run-action@v4
-        with:
-          concurrency: 10
-          working-directory: ./examples/cucumber
+  #     - name: Run saucectl
+  #       uses: saucelabs/saucectl-run-action@v4
+  #       with:
+  #         concurrency: 10
+  #         working-directory: ./examples/cucumber

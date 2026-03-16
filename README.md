@@ -15,6 +15,12 @@ _If you're using VS Code, you can use [Runme](https://marketplace.visualstudio.c
 curl -L https://saucelabs.github.io/saucectl/install | bash
 ```
 
+If `saucectl` is not found after install, the binary may be in this repo’s `bin/` folder. From the project root run:
+
+```shell
+./bin/saucectl run
+```
+
 ⚠ Make sure saucectl version is newer than **v0.82.0**
 
 ### Set Your Sauce Labs Credentials
