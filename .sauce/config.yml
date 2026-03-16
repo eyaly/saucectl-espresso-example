@@ -14,6 +14,8 @@ espresso:
   app: ./apps/mda-1.0.10-12.apk
   testApp: ./apps/mda-androidTest-1.0.10-12.apk
 suites:
+  testOptions:
+    numShards: 3
   - name: "saucy barista on Android Emulator"
     devices:
       - name: "Samsung.*"
